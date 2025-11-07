@@ -128,22 +128,22 @@
             </ul>
           </div>
           <div class="col-lg-6">
-            <form novalidate onsubmit="return checkForm();">
+            <form novalidate>
               <div class="form-group">
                 <label class="col-form-label" for="dane"><i class="fa fa-user"></i> Imię i nazwisko</label>
-                <input onBlur="checkName()" type="text" class="form-control" id="dane" placeholder="Jan Kowalski">
+                <input type="text" class="form-control" id="dane" placeholder="Jan Kowalski">
                 <small class="form-text text-muted">Nie udostępniamy Twoich danych.</small>
                 <p id="errorName" class="invalid-feedback">Podanie imienia i nazwiska jest wymagane!</p>
               </div>
               <div class="form-group">
                 <label for="email"><i class="fa fa-envelope"></i> E‑mail</label>
-                <input onBlur="checkEmail()" type="email" class="form-control" id="email" placeholder="twoj@email.pl">
+                <input type="email" class="form-control" id="email" placeholder="twoj@email.pl">
                 <small class="form-text text-muted">Nie udostępniamy Twojego adresu.</small>
                 <p id="errorEmail" class="invalid-feedback">Podanie adresu e-mail jest wymagane!</p>
               </div>
               <div class="form-group">
                 <label for="info"><i class="fa fa-pencil"></i> Wiadomość</label>
-                <textarea onBlur="checkInfo()" class="form-control" id="info" rows="4" placeholder="Napisz kilka słów..."></textarea>
+                <textarea class="form-control" id="info" rows="4" placeholder="Napisz kilka słów..."></textarea>
                 <p id="errorInfo" class="invalid-feedback">Podanie informacji jest wymagane!</p>
               </div>
               <button type="submit" class="btn btn-primary">Wyślij</button>
@@ -202,30 +202,10 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/forms.js"></script>
-  <script>
-    (function() {
-      var $modal = $('#imageModal');
-      var $img = $('#imageModal img');
-      var $title = $('#imageModalLabel');
-      $(document).on('click', '.card-img-top, .hero-img', function(e) {
-        var src = this.getAttribute('src');
-        var alt = this.getAttribute('alt') || 'Podgląd zdjęcia';
-        $img.attr('src', src);
-        $img.attr('alt', alt);
-        $title.text(alt);
-        $modal.modal('show');
-      });
-
-      $modal.on('hidden.bs.modal', function () {
-        $img.attr('src', '');
-        $img.attr('alt', '');
-        $title.text('Podgląd');
-      });
-    })();
-  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous" defer></script>
+  <script src="js/bootstrap.min.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
